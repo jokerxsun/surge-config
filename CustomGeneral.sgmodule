@@ -5,22 +5,6 @@
 [General]
 bypass-system = true
 skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,17.0.0.0/8,localhost,*.local,passenger.t3go.cn,timestamp.apple.com,*.bytedance.net,*.byted.org,*.feishu.cn,*.wtturl.cn,*.qq.com
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
-doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query
-hijack-dns = 8.8.8.8:53, 8.8.4.4:53
-dns-server = system, 8.8.8.8, 8.8.4.4
-loglevel = notify
-replica = false
-tls-provider = default
-show-error-page-for-reject = true
-exclude-simple-hostnames = true
-always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
-internet-test-url = http://www.baidu.com
-proxy-test-url = http://www.gstatic.com/generate_204
-# iOS Only
-# allow-wifi-access = true
-# wifi-access-http-port = 6152
-# wifi-access-socks5-port = 6153
 # macOS Only
 enhanced-mode-by-rule = false
 test-timeout = 5
