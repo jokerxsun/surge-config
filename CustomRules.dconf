@@ -1,2 +1,6 @@
+#!name=Custom Rules
+#!desc=自定义规则
+# https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/Claude
+
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list,OpenAI
