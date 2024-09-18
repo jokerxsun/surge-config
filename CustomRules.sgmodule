@@ -1,6 +1,9 @@
 #!name=Custom Rules
 #!desc=自定义规则
 
+[Host]
+router.asus.com = 192.168.50.1 // Asus Router
+
 [Rule]
 SRC-IP, 192.168.50.110, DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list,OpenAI
