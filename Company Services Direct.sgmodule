@@ -1,0 +1,11 @@
+#!name=Company Services Direct (Lite)
+#!desc=公司公网服务直连补充（不追求写全）
+
+[Rule]
+# 飞书/字节常见后缀（少而精）
+DOMAIN-SUFFIX,feishu.cn,DIRECT
+DOMAIN-SUFFIX,feishucdn.com,DIRECT
+DOMAIN-SUFFIX,larkoffice.com,DIRECT
+DOMAIN-SUFFIX,byted.org,DIRECT
+DOMAIN-SUFFIX,bytedance.net,DIRECT
+DOMAIN-SUFFIX,wtturl.cn,DIRECT
