@@ -1,4 +1,4 @@
-#!name=Company_DNS_Override
+#!name=Company DNS Override
 #!desc=公司网络 DNS 覆盖（不影响机场）保证公司服务正常访问
 
 [General]
