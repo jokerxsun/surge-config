@@ -4,7 +4,7 @@
 [General]
 # 使用 %APPEND% 语法追加域名，确保不破坏机场原有的 skip-proxy 配置
 # 作用：将这些域名同步到系统的“跳过代理”设置中，由 Surge VIF 接管
-skip-proxy = %APPEND% *.bytedance.net, *.byted.org, *.feishu.cn, *.larkoffice.com, *.wtturl.cn, *.quickconnect.cn, *.feishucdn.com, *.ibytedapm.com
+skip-proxy = %APPEND% *.bytedance.net, *.byted.org, *.feishu.cn, *.larkoffice.com, *.wtturl.cn, *.quickconnect.cn, *.feishucdn.com, *.ibytedapm.com, *.asuscomm.com, *.asus.com, *.quickconnect.cn
 
 [Rule]
 # 飞书/字节常见后缀（少而精）
