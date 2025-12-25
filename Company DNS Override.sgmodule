@@ -1,0 +1,9 @@
+#!name=Company DNS Override
+#!desc=公司网络 DNS 覆盖（不影响机场）保证公司服务正常访问
+
+[General]
+# ⭐ 关键：让 Surge 使用系统 DNS（公司下发的）
+dns-server = system
+
+# 防止 DoH 抢答
+doh-server = 
