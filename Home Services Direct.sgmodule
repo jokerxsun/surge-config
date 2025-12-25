@@ -1,0 +1,7 @@
+#!name=Company Services Direct (Lite)
+#!desc=家庭公网服务直连补充（不追求写全）
+
+[Rule]
+DOMAIN-SUFFIX,quickconnect.cn,DIRECT
+DOMAIN-SUFFIX,asus.com,DIRECT
+DOMAIN-SUFFIX,asuscomm.com,DIRECT
