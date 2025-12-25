@@ -1,7 +1,17 @@
-#!name=Company Services Direct (Lite)
-#!desc=家庭公网服务直连补充（不追求写全）
+#!name=Home Always-On Direct
+#!desc=家庭环境常驻直连（路由器 / 设备 / 家庭服务）
+
+[Host]
+router.asus.com = 192.168.50.1    // ASUS Router main
+www.asusrouter.com = 192.168.50.1
 
 [Rule]
 DOMAIN-SUFFIX,quickconnect.cn,DIRECT
 DOMAIN-SUFFIX,asus.com,DIRECT
 DOMAIN-SUFFIX,asuscomm.com,DIRECT
+
+# 测速类
+DOMAIN-KEYWORD,speedtest,DIRECT
+
+# 指定家庭设备（固定 IP）
+SRC-IP,192.168.50.110,DIRECT
