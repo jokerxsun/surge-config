@@ -7,9 +7,6 @@ dns-server = %INSERT% system
 # 2. 追加公司域名到系统排除列表，由 VIF 处理解析
 skip-proxy = %APPEND% 192.168.50.0/24, *.bytedance.net, *.byted.org, *.feishu.cn, *.larkoffice.com, *.wtturl.cn, *.feishucdn.com, *.ibytedapm.com, *.quickconnect.cn, *.asus.com, *.asuscomm.com
 
-# 3.让 Surge 虚拟网卡直接忽略来自 .110  QT 的包
-bypass-tun = %APPEND% 192.168.50.110/32
-
 [Host]
 # 家庭路由器快捷访问
 router.asus.com = 192.168.50.1
