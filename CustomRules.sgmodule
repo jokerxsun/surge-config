@@ -2,10 +2,10 @@
 #!desc=自定义规则
 
 [Host]
-router.asus.com = 192.168.50.1 // Asus Router
+router.asus.com = 192.168.50.1    // ASUS Router main
+www.asusrouter.com = 192.168.50.1
 
 [Rule]
 DOMAIN-KEYWORD,speedtest,DIRECT
-SRC-IP, 192.168.50.110, DIRECT
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list,OpenAI
+SRC-IP,192.168.50.110,DIRECT
 
