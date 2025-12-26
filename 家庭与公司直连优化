@@ -1,0 +1,44 @@
+#!name=公司与家庭直连优化
+#!desc=接管内网流量并强制直连 (DIRECT)，替代 skip-proxy 方案。
+
+[Rule]
+# ==============================
+#  🏠 家庭/本地网段 (支持 CIDR)
+# ==============================
+# 您的本地网段 (192.168.50.x)
+# Surge 完美支持 /24 写法，无需改成通配符
+IP-CIDR, 192.168.50.0/24, DIRECT
+
+# ==============================
+#  🏢 字节跳动系 (办公/开发)
+# ==============================
+# 核心办公
+DOMAIN-SUFFIX, bytedance.net, DIRECT
+DOMAIN-SUFFIX, byted.org, DIRECT
+DOMAIN-SUFFIX, feishu.cn, DIRECT
+DOMAIN-SUFFIX, larkoffice.com, DIRECT
+
+# 开发与文档
+DOMAIN-SUFFIX, bytednsdoc.com, DIRECT
+DOMAIN-SUFFIX, wtturl.cn, DIRECT
+DOMAIN-SUFFIX, zijieapi.com, DIRECT
+DOMAIN-SUFFIX, sinf.net, DIRECT
+
+# 基础设施与日志
+DOMAIN-SUFFIX, feishucdn.com, DIRECT
+DOMAIN-SUFFIX, ibytedapm.com, DIRECT
+DOMAIN-SUFFIX, volceapplog.com, DIRECT
+DOMAIN-SUFFIX, snssdk.com, DIRECT
+
+# ==============================
+#  ☁️ 个人设备 (NAS/Router)
+# ==============================
+DOMAIN-SUFFIX, quickconnect.cn, DIRECT
+DOMAIN-SUFFIX, asus.com, DIRECT
+DOMAIN-SUFFIX, asuscomm.com, DIRECT
+
+# ==============================
+#  🛡 兜底规则 (防止漏网)
+# ==============================
+# 强制所有局域网 IP 直连
+RULE-SET, LAN, DIRECT
