@@ -4,7 +4,7 @@
 [General]
 # 1. 优先使用系统 DNS (公司内网专用)，追加机场 DNS 作为备选
 dns-server = %INSERT% system
-doh-server = “”
+doh-server = “ ”
 # 2. 追加公司域名到系统排除列表，由 VIF 处理解析
 skip-proxy = %APPEND% 192.168.50.0/24, *.bytedance.net, *.byted.org, *.feishu.cn, *.larkoffice.com, *.wtturl.cn, *.feishucdn.com, *.ibytedapm.com, *.quickconnect.cn, *.asus.com, *.asuscomm.com, *.volceapplog.com, *.zijieapi.com, *.snssdk.com
 [Host]
