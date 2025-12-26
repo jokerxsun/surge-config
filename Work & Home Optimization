@@ -4,8 +4,7 @@
 [General]
 # 1. 优先使用系统 DNS (公司内网专用)，追加机场 DNS 作为备选
 dns-server = %INSERT% system
-# 2. 追加公司域名到系统排除列表，由 VIF 处理解析
-skip-proxy = %APPEND% 192.168.50.0/24, *.bytedance.net, *.byted.org, *.feishu.cn, *.larkoffice.com, *.wtturl.cn, *.feishucdn.com, *.ibytedapm.com, *.quickconnect.cn, *.asus.com, *.asuscomm.com, *.volceapplog.com, *.zijieapi.com, *.snssdk.com, *.sinf.net, *.bytednsdoc.com
+
 [Host]
 # 家庭路由器快捷访问
 router.asus.com = 192.168.50.1
@@ -15,21 +14,46 @@ www.asusrouter.com = 192.168.50.1
 # 指定本地设备不走代理
 SRC-IP,192.168.50.110,DIRECT
 
-# --- 公司办公服务 ---
-DOMAIN-SUFFIX,byted.org,DIRECT
-DOMAIN-SUFFIX,bytedance.net,DIRECT
-DOMAIN-SUFFIX,feishu.cn,DIRECT
-DOMAIN-SUFFIX,larkoffice.com,DIRECT
-DOMAIN-SUFFIX,wtturl.cn,DIRECT
-DOMAIN-SUFFIX,sinf.net,DIRECT
-
-# --- 私有地址直连 (no-resolve 防止 DNS 劫持) ---
+# ==============================
+#  🏠 家庭/本地网段 (支持 CIDR)
+# ==============================
+# 您的本地网段 (192.168.50.x)
+# Surge 完美支持 /24 写法，无需改成通配符
+IP-CIDR,192.168.50.0/24,DIRECT
 IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
 IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 
-# --- 家庭与工具 ---
-DOMAIN-SUFFIX,quickconnect.cn,DIRECT
-DOMAIN-SUFFIX,asus.com,DIRECT
-DOMAIN-SUFFIX,asuscomm.com,DIRECT
-DOMAIN-KEYWORD,speedtest,DIRECT
+# ==============================
+#  🏢 字节跳动系 (办公/开发)
+# ==============================
+# 核心办公
+DOMAIN-SUFFIX, bytedance.net, DIRECT
+DOMAIN-SUFFIX, byted.org, DIRECT
+DOMAIN-SUFFIX, feishu.cn, DIRECT
+DOMAIN-SUFFIX, larkoffice.com, DIRECT
+
+# 开发与文档
+DOMAIN-SUFFIX, bytednsdoc.com, DIRECT
+DOMAIN-SUFFIX, wtturl.cn, DIRECT
+DOMAIN-SUFFIX, zijieapi.com, DIRECT
+DOMAIN-SUFFIX, sinf.net, DIRECT
+
+# 基础设施与日志
+DOMAIN-SUFFIX, feishucdn.com, DIRECT
+DOMAIN-SUFFIX, ibytedapm.com, DIRECT
+DOMAIN-SUFFIX, volceapplog.com, DIRECT
+DOMAIN-SUFFIX, snssdk.com, DIRECT
+
+# ==============================
+#  ☁️ 个人设备 (NAS/Router)
+# ==============================
+DOMAIN-SUFFIX, quickconnect.cn, DIRECT
+DOMAIN-SUFFIX, asus.com, DIRECT
+DOMAIN-SUFFIX, asuscomm.com, DIRECT
+
+# ==============================
+#  🛡 兜底规则 (防止漏网)
+# ==============================
+# 强制所有局域网 IP 直连
+RULE-SET, LAN, DIRECT
