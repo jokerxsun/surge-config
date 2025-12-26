@@ -17,11 +17,11 @@ www.asusrouter.com = 192.168.50.1
 SRC-IP,192.168.50.110,DIRECT
 
 # --- 公司办公服务 ---
-# DOMAIN-SUFFIX,byted.org,DIRECT
-# DOMAIN-SUFFIX,bytedance.net,DIRECT
-# DOMAIN-SUFFIX,feishu.cn,DIRECT
-# DOMAIN-SUFFIX,larkoffice.com,DIRECT
-# DOMAIN-SUFFIX,wtturl.cn,DIRECT
+DOMAIN-SUFFIX,byted.org,DIRECT
+DOMAIN-SUFFIX,bytedance.net,DIRECT
+DOMAIN-SUFFIX,feishu.cn,DIRECT
+DOMAIN-SUFFIX,larkoffice.com,DIRECT
+DOMAIN-SUFFIX,wtturl.cn,DIRECT
 
 # --- 私有地址直连 (no-resolve 防止 DNS 劫持) ---
 IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
