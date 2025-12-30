@@ -56,4 +56,4 @@ DOMAIN-SUFFIX, asuscomm.com, DIRECT
 #  🛡 兜底规则 (防止漏网)
 # ==============================
 # 强制所有局域网 IP 直连
-# RULE-SET, LAN, DIRECT
+RULE-SET, LAN, DIRECT, no-resolve
