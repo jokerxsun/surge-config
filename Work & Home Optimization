@@ -5,10 +5,12 @@
 # 1. 优先使用系统 DNS (公司内网专用)，追加机场 DNS 作为备选
 dns-server = %INSERT% system
 
+
 [Host]
 # 家庭路由器快捷访问
 router.asus.com = 192.168.50.1
 www.asusrouter.com = 192.168.50.1
+jokersun.synology.me = server:system
 
 [Rule]
 # 指定本地设备不走代理
